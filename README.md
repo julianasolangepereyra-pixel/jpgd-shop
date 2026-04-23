@@ -1,1 +1,0 @@
-# jpgd-shop
