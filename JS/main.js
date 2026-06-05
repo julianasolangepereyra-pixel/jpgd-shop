@@ -5,9 +5,10 @@ const mobileCartDrawer = document.getElementById('mobileCartDrawer');
 const drawerBackdrop  = document.getElementById('drawerBackdrop');
 const navCartBtn      = document.getElementById('navCartBtn');
 const mobileCartClose = document.getElementById('mobileCartClose');
+const mobileMenuClose = document.getElementById('mobileMenuClose');
 
 function isMobile() {
-  return window.innerWidth <= 768;
+  return window.innerWidth <= 782;
 }
 
 /* ── HELPERS ── */
@@ -16,6 +17,7 @@ function openMenu() {
   mobileMenuDrawer.setAttribute('aria-hidden', 'false');
   drawerBackdrop.classList.add('is-active');
   hamburger.setAttribute('aria-expanded', 'true');
+  hamburger.classList.add('is-open');
   document.body.style.overflow = 'hidden';
 }
 
@@ -23,6 +25,7 @@ function closeMenu() {
   mobileMenuDrawer.classList.remove('is-open');
   mobileMenuDrawer.setAttribute('aria-hidden', 'true');
   hamburger.setAttribute('aria-expanded', 'false');
+  hamburger.classList.remove('is-open');
   if (!mobileCartDrawer.classList.contains('is-open')) {
     drawerBackdrop.classList.remove('is-active');
     document.body.style.overflow = '';
@@ -33,12 +36,14 @@ function openCart() {
   mobileCartDrawer.classList.add('is-open');
   mobileCartDrawer.setAttribute('aria-hidden', 'false');
   drawerBackdrop.classList.add('is-active');
+  if (navCartBtn) navCartBtn.classList.add('is-active');
   document.body.style.overflow = 'hidden';
 }
 
 function closeCart() {
   mobileCartDrawer.classList.remove('is-open');
   mobileCartDrawer.setAttribute('aria-hidden', 'true');
+  if (navCartBtn) navCartBtn.classList.remove('is-active');
   if (!mobileMenuDrawer.classList.contains('is-open')) {
     drawerBackdrop.classList.remove('is-active');
     document.body.style.overflow = '';
@@ -78,6 +83,11 @@ if (navCartBtn) {
 /* ── CERRAR CARRITO ── */
 if (mobileCartClose) {
   mobileCartClose.addEventListener('click', closeCart);
+}
+
+/* ── CERRAR MENÚ ── */
+if (mobileMenuClose) {
+  mobileMenuClose.addEventListener('click', closeMenu);
 }
 
 /* ── BACKDROP ── */
