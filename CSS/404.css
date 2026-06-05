@@ -1,0 +1,410 @@
+/* ── LAYOUT 404 ── */
+.error404 {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 0;
+  min-height: calc(100vh - 76px);
+  position: relative;
+  overflow: hidden;
+  background-color: whitesmoke;
+  background-image:
+    linear-gradient(rgba(18, 58, 160, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 58, 160, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ── 404 GIGANTE DE FONDO ── */
+.error404__numero-fondo {
+  position: absolute;
+  bottom: -6%;
+  left: -2%;
+  font-family: "Riverbend", serif;
+  font-size: clamp(280px, 40vw, 560px);
+  color: rgba(18, 58, 160, 0.05);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+/* ── SPARKLES DE FONDO ── */
+.error404__fondo {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.error404__sparkle {
+  position: absolute;
+  pointer-events: none;
+  animation: floatSparkleMusic 4s ease-in-out infinite;
+}
+
+.error404__sparkle--1 {
+  top: 8%;
+  left: 38%;
+  width: 52px;
+  opacity: 0.45;
+  animation-duration: 4.8s;
+}
+
+.error404__sparkle--2 {
+  top: 55%;
+  left: 18%;
+  width: 32px;
+  opacity: 0.3;
+  animation-duration: 3.6s;
+  animation-delay: 0.7s;
+}
+
+.error404__sparkle--3 {
+  bottom: 14%;
+  left: 44%;
+  width: 44px;
+  opacity: 0.35;
+  animation-duration: 5s;
+  animation-delay: 1.2s;
+}
+
+.error404__sparkle--4 {
+  top: 25%;
+  left: 8%;
+  width: 24px;
+  opacity: 0.25;
+  animation-duration: 3.9s;
+  animation-delay: 0.4s;
+}
+
+/* ── CONTENIDO CENTRAL ── */
+.error404__contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding: 80px 64px 80px 56px;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+}
+
+/* ── ENCABEZADO ── */
+.error404__encabezado {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.error404__codigo {
+  font-family: "CSClaireMono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: orange;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.error404__codigo::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 1.5px;
+  background: orange;
+}
+
+.error404__titulo {
+  font-family: "Riverbend", serif;
+  font-size: clamp(56px, 8vw, 112px);
+  color: #123aa0;
+  line-height: 0.9;
+  font-weight: 400;
+}
+
+.error404__punto {
+  color: orange;
+}
+
+/* ── MENSAJE ── */
+.error404__mensaje {
+  font-family: "CSClaireMono", monospace;
+  font-size: clamp(14px, 1.5vw, 17px);
+  color: rgba(18, 58, 160, 0.65);
+  line-height: 1.7;
+  max-width: 440px;
+}
+
+/* ── SUGERENCIAS ── */
+.error404__sugerencias {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.error404__sugerencias-titulo {
+  font-family: "CSClaireMono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(18, 58, 160, 0.4);
+}
+
+.error404__sugerencias-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.error404__sugerencia-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "CSClaireMono", monospace;
+  font-size: 14px;
+  color: #123aa0;
+  text-decoration: none;
+  padding: 6px 0;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s, gap 0.2s;
+}
+
+.error404__sugerencia-link svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.error404__sugerencia-link:hover {
+  color: orange;
+  border-bottom-color: rgba(255, 165, 0, 0.3);
+  gap: 10px;
+}
+
+.error404__sugerencia-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* ── BOTÓN VOLVER AL INICIO ── */
+.btn-volver-404 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #123aa0;
+  color: whitesmoke;
+  font-family: "CSClaireMono", monospace;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 18px 44px;
+  align-self: flex-start;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-volver-404:hover {
+  background: orange;
+  color: #123aa0;
+}
+
+.btn-volver-404 .ant-border-btn {
+  position: absolute;
+  inset: -6px;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  pointer-events: none;
+  overflow: visible;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.btn-volver-404:hover .ant-border-btn {
+  opacity: 1;
+}
+
+/* ── PANEL LATERAL DECORATIVO ── */
+.error404__panel {
+  background: #123aa0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.error404__panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.error404__panel-interior {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 56px 40px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* ── NÚMERO CON EFECTO GLITCH ── */
+.error404__glitch-wrapper {
+  position: relative;
+}
+
+.error404__glitch {
+  font-family: "Riverbend", serif;
+  font-size: clamp(80px, 14vw, 160px);
+  color: orange;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  position: relative;
+  animation: glitch 3.5s infinite;
+}
+
+.error404__glitch::before,
+.error404__glitch::after {
+  content: attr(data-texto);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: "Riverbend", serif;
+  font-size: inherit;
+  line-height: 1;
+  letter-spacing: inherit;
+}
+
+.error404__glitch::before {
+  color: rgba(255, 165, 0, 0.5);
+  animation: glitch-arriba 3.5s infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+}
+
+.error404__glitch::after {
+  color: rgba(255, 255, 255, 0.15);
+  animation: glitch-abajo 3.5s infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch {
+  0%, 90%, 100% { transform: translate(0); }
+  92%           { transform: translate(-2px, 1px); }
+  94%           { transform: translate(2px, -1px); }
+  96%           { transform: translate(-1px, 2px); }
+  98%           { transform: translate(1px, -2px); }
+}
+
+@keyframes glitch-arriba {
+  0%, 88%, 100% { transform: translate(0); opacity: 0; }
+  90%           { transform: translate(-4px, -2px); opacity: 1; }
+  92%           { transform: translate(4px, 2px); opacity: 1; }
+  94%           { opacity: 0; }
+}
+
+@keyframes glitch-abajo {
+  0%, 88%, 100% { transform: translate(0); opacity: 0; }
+  91%           { transform: translate(4px, 2px); opacity: 1; }
+  93%           { transform: translate(-4px, -2px); opacity: 1; }
+  95%           { opacity: 0; }
+}
+
+/* ── LÍNEAS DECORATIVAS ── */
+.error404__lineas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.error404__linea {
+  display: block;
+  height: 1px;
+  background: rgba(245, 245, 245, 0.15);
+  width: 100%;
+}
+
+.error404__linea:nth-child(2) { width: 75%; }
+.error404__linea:nth-child(3) { width: 55%; }
+.error404__linea:nth-child(4) { width: 85%; }
+.error404__linea:nth-child(5) { width: 40%; }
+
+/* ── TEXTO TIPO TERMINAL ── */
+.error404__panel-texto {
+  font-family: "CSClaireMono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: rgba(245, 245, 245, 0.35);
+  text-transform: uppercase;
+  align-self: flex-start;
+  line-height: 1.8;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .error404 {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .error404__panel {
+    min-height: 280px;
+    order: -1;
+  }
+
+  .error404__panel-interior {
+    padding: 40px 32px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .error404__glitch {
+    font-size: clamp(64px, 20vw, 120px);
+  }
+
+  .error404__lineas,
+  .error404__panel-texto {
+    display: none;
+  }
+
+  .error404__contenido {
+    padding: 56px 24px 64px;
+    gap: 28px;
+  }
+
+  .error404__numero-fondo {
+    font-size: clamp(200px, 55vw, 400px);
+    bottom: auto;
+    top: 30%;
+    left: -5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .error404__contenido {
+    padding: 40px 20px 56px;
+  }
+
+  .btn-volver-404 {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .error404__titulo {
+    font-size: clamp(48px, 14vw, 72px);
+  }
+}
