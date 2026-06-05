@@ -1,28 +1,28 @@
 /* ── FUENTES ── */
 @font-face {
   font-family: "CSClaireMono";
-  src: url("../Assets/fonts/CS Claire Mono/CSClaireMono-Regular.ttf") format("truetype");
+  src: url("../Assets/tipografias/CS Claire Mono/CSClaireMono-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "CSClaireMono";
-  src: url("../Assets/fonts/CS Claire Mono/CSClaireMono-Italic.ttf") format("truetype");
+  src: url("../Assets/tipografias/CS Claire Mono/CSClaireMono-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "CSClaireMonoReverse";
-  src: url("../Assets/fonts/CS Claire Mono/CSClaireMono-ReverseItalic.ttf") format("truetype");
+  src: url("../Assets/tipografias/CS Claire Mono/CSClaireMono-ReverseItalic.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Riverbend";
   src:
-    url("../Assets/fonts/Riverbend/webfontkit-20230829-231608/riverbend-webfont.woff2") format("woff2"),
-    url("../Assets/fonts/Riverbend/webfontkit-20230829-231608/riverbend-webfont.woff") format("woff");
+    url("../Assets/tipografias/Riverbend/webfontkit-20230829-231608/riverbend-webfont.woff2") format("woff2"),
+    url("../Assets/tipografias/Riverbend/webfontkit-20230829-231608/riverbend-webfont.woff") format("woff");
   font-weight: 400;
 }
 
@@ -163,6 +163,43 @@ nav {
 .nav-icons a:hover svg circle,
 .nav-icons a:hover svg rect {
   fill: orange !important;
+}
+
+/* ── HAMBURGUESA ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #123aa0;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-hamburger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-hamburger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ── HERO ── */
@@ -694,6 +731,71 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    padding: 12px 20px;
+  }
+
+  .nav-logo {
+    order: 1;
+    flex: 1;
+  }
+
+  .nav-icons {
+    order: 2;
+  }
+
+  .nav-hamburger {
+    display: flex;
+    order: 3;
+  }
+
+  .nav-links {
+    display: none;
+    order: 4;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 8px 0 16px;
+    border-top: 1px solid rgba(18, 58, 160, 0.12);
+    margin-top: 8px;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid rgba(18, 58, 160, 0.06);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 0;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 420px;
+  }
+
+  .capsula-box h1 {
+    font-size: clamp(20px, 6vw, 32px);
+  }
+
+  .categorias ul li {
+    font-size: clamp(40px, 14vw, 100px);
+  }
+
+  .newsletter {
+    max-width: 100%;
+  }
+}
+
 /* ── NEWSLETTER ── */
 
 .newsletter {
@@ -762,7 +864,9 @@ footer {
   background-color: orange;
   color: #123aa0;
   transform: scale(1.04);
-}/* ── BANNER CATEGORÍA ── */
+}
+
+/* ── BANNER CATEGORÍA ── */
 .banner-categoria {
   position: relative;
   background: #123aa0;
