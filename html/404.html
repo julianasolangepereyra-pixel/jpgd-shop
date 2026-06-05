@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>¡Gracias por tu compra! — JPGD Shop</title>
-  <link rel="stylesheet" href="CSS/styles.css" />
-  <link rel="stylesheet" href="CSS/thank-you.css" />
+  <title>404 — Página no encontrada · JPGD Shop</title>
+  <link rel="stylesheet" href="../CSS/styles.css" />
 </head>
 <body>
 
@@ -14,9 +13,9 @@
 
   <!-- ── NAV ── -->
   <nav>
-    <a class="nav-logo" href="index.html">
+    <a class="nav-logo" href="../index.html">
       <div class="nav-logo-wrapper">
-        <img src="Assets/logo animado gif/logo animación principal-.gif" alt="JPGD.ai logo" />
+        <img src="../Assets/logo animado gif/logo animación principal-.gif" alt="JPGD.ai logo" />
       </div>
     </a>
     <ul class="nav-links">
@@ -52,163 +51,107 @@
     </div>
   </nav>
 
-  <!-- ── HERO DE CONFIRMACIÓN ── -->
-  <main class="confirmacion">
+  <!-- ── CONTENIDO 404 ── -->
+  <main class="error404" aria-labelledby="titulo-404">
 
-    <!-- Decoración de fondo -->
-    <div class="confirmacion__fondo" aria-hidden="true">
-      <img src="Assets/assets svg/Sparkle.svg" alt="" class="confirmacion__sparkle confirmacion__sparkle--1" />
-      <img src="Assets/assets svg/Sparkle.svg" alt="" class="confirmacion__sparkle confirmacion__sparkle--2" />
-      <img src="Assets/assets svg/Sparkle.svg" alt="" class="confirmacion__sparkle confirmacion__sparkle--3" />
-      <img src="Assets/assets svg/Sparkle.svg" alt="" class="confirmacion__sparkle confirmacion__sparkle--4" />
-      <img src="Assets/assets svg/Sparkle.svg" alt="" class="confirmacion__sparkle confirmacion__sparkle--5" />
+    <!-- Fondo decorativo -->
+    <div class="error404__fondo" aria-hidden="true">
+      <img src="../Assets/assets svg/Sparkle.svg" alt="" class="error404__sparkle error404__sparkle--1" />
+      <img src="../Assets/assets svg/Sparkle.svg" alt="" class="error404__sparkle error404__sparkle--2" />
+      <img src="../Assets/assets svg/Sparkle.svg" alt="" class="error404__sparkle error404__sparkle--3" />
+      <img src="../Assets/assets svg/Sparkle.svg" alt="" class="error404__sparkle error404__sparkle--4" />
     </div>
 
-    <!-- Columna izquierda: mensaje -->
-    <section class="confirmacion__mensaje" aria-labelledby="titulo-confirmacion">
+    <!-- Número 404 gigante de fondo -->
+    <p class="error404__numero-fondo" aria-hidden="true">404</p>
 
-      <div class="confirmacion__icono-check" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="20 6 9 17 4 12"/>
-        </svg>
-      </div>
+    <!-- Contenido central -->
+    <div class="error404__contenido">
 
-      <span class="confirmacion__etiqueta">Pedido confirmado</span>
+      <header class="error404__encabezado">
+        <span class="error404__codigo">Error 404</span>
+        <h1 class="error404__titulo" id="titulo-404">
+          Esta página<br />
+          no existe<span class="error404__punto">.</span>
+        </h1>
+      </header>
 
-      <h1 class="confirmacion__titulo" id="titulo-confirmacion">
-        ¡Gracias<br>por tu<br>compra!
-      </h1>
-
-      <p class="confirmacion__subtitulo">
-        Tu pedido está en camino.<br>
-        Te enviamos la confirmación a tu email.
+      <p class="error404__mensaje">
+        Parece que la URL que buscabas viajó al pasado.<br />
+        Pero nuestros diseños siguen acá, esperándote.
       </p>
 
-      <!-- Número de pedido -->
-      <div class="confirmacion__numero-pedido">
-        <span class="confirmacion__numero-pedido__etiqueta">Número de pedido</span>
-        <strong class="confirmacion__numero-pedido__valor">#JPG-20260605-0042</strong>
-      </div>
+      <!-- Sugerencias de navegación -->
+      <nav class="error404__sugerencias" aria-label="Páginas sugeridas">
+        <p class="error404__sugerencias-titulo">Quizás buscabas:</p>
+        <ul class="error404__sugerencias-lista">
+          <li>
+            <a href="categorias.html" class="error404__sugerencia-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+              Remeras
+            </a>
+          </li>
+          <li>
+            <a href="categorias.html" class="error404__sugerencia-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+              Prints
+            </a>
+          </li>
+          <li>
+            <a href="categorias.html" class="error404__sugerencia-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+              Stickers
+            </a>
+          </li>
+          <li>
+            <a href="categorias.html" class="error404__sugerencia-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+              Totebags
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-      <!-- CTAs -->
-      <div class="confirmacion__acciones">
-        <a href="index.html" class="btn-volver-inicio">
-          <span>Volver al inicio</span>
-          <svg class="ant-border-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387.4 97.9" preserveAspectRatio="none">
-            <ellipse cx="193.7" cy="48.95" rx="205" ry="53.95" fill="none" stroke="orange" stroke-width="2" stroke-dasharray="8 5" vector-effect="non-scaling-stroke"/>
-          </svg>
-        </a>
-        <a href="categorias.html" class="btn-seguir-comprando">
-          Seguir comprando →
-        </a>
-      </div>
+      <!-- CTA principal -->
+      <a href="../index.html" class="btn-volver-404">
+        <span>Volver al inicio</span>
+        <svg class="ant-border-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387.4 97.9" preserveAspectRatio="none">
+          <ellipse cx="193.7" cy="48.95" rx="205" ry="53.95" fill="none" stroke="orange" stroke-width="2" stroke-dasharray="8 5" vector-effect="non-scaling-stroke"/>
+        </svg>
+      </a>
 
-    </section>
+    </div>
 
-    <!-- Columna derecha: resumen del pedido -->
-    <aside class="confirmacion__resumen" aria-label="Resumen del pedido confirmado">
-
-      <div class="confirmacion__resumen-header">
-        <h2 class="confirmacion__resumen-titulo">Tu pedido</h2>
-        <span class="confirmacion__resumen-estado">En preparación</span>
-      </div>
-
-      <!-- Ítems -->
-      <ul class="confirmacion__items">
-
-        <li class="confirmacion__item">
-          <div class="confirmacion__item-imagen-wrapper">
-            <img src="Assets/fotos/ejemplo remera.png" alt="Remera Lórem Ipsum" class="confirmacion__item-imagen" />
-            <span class="confirmacion__item-cantidad" aria-label="Cantidad: 2">2</span>
-          </div>
-          <div class="confirmacion__item-info">
-            <p class="confirmacion__item-nombre">Remera Lórem Ipsum</p>
-            <p class="confirmacion__item-variante">Talle M</p>
-          </div>
-          <p class="confirmacion__item-precio">$76.000</p>
-        </li>
-
-        <li class="confirmacion__item">
-          <div class="confirmacion__item-imagen-wrapper">
-            <img src="Assets/fotos/ejemplo remera.png" alt="Remera Grid System" class="confirmacion__item-imagen" />
-            <span class="confirmacion__item-cantidad" aria-label="Cantidad: 1">1</span>
-          </div>
-          <div class="confirmacion__item-info">
-            <p class="confirmacion__item-nombre">Remera Grid System</p>
-            <p class="confirmacion__item-variante">Talle L</p>
-          </div>
-          <p class="confirmacion__item-precio">$42.000</p>
-        </li>
-
-        <li class="confirmacion__item">
-          <div class="confirmacion__item-imagen-wrapper">
-            <img src="Assets/fotos/gorra-frente.png" alt="Sticker Pack Editorial" class="confirmacion__item-imagen" />
-            <span class="confirmacion__item-cantidad" aria-label="Cantidad: 3">3</span>
-          </div>
-          <div class="confirmacion__item-info">
-            <p class="confirmacion__item-nombre">Sticker Pack Editorial</p>
-            <p class="confirmacion__item-variante">Talle único</p>
-          </div>
-          <p class="confirmacion__item-precio">$36.000</p>
-        </li>
-
-      </ul>
-
-      <!-- Totales -->
-      <dl class="confirmacion__totales">
-        <div class="confirmacion__total-fila">
-          <dt>Subtotal</dt>
-          <dd>$154.000</dd>
+    <!-- Panel lateral decorativo -->
+    <aside class="error404__panel" aria-hidden="true">
+      <div class="error404__panel-interior">
+        <div class="error404__glitch-wrapper">
+          <p class="error404__glitch" data-texto="404">404</p>
         </div>
-        <div class="confirmacion__total-fila">
-          <dt>Envío</dt>
-          <dd class="confirmacion__envio-gratis">Gratis</dd>
+        <div class="error404__lineas">
+          <span class="error404__linea"></span>
+          <span class="error404__linea"></span>
+          <span class="error404__linea"></span>
+          <span class="error404__linea"></span>
+          <span class="error404__linea"></span>
         </div>
-        <div class="confirmacion__total-fila confirmacion__total-fila--total">
-          <dt>Total pagado</dt>
-          <dd>$154.000</dd>
-        </div>
-      </dl>
-
-      <!-- Datos de envío -->
-      <div class="confirmacion__envio-info">
-        <h3 class="confirmacion__envio-titulo">Envío a</h3>
-        <address class="confirmacion__envio-direccion">
-          Julieta Pereyra<br />
-          Av. Corrientes 1234, piso 3, dpto B<br />
-          Buenos Aires, CABA C1000<br />
-          Argentina
-        </address>
-        <p class="confirmacion__envio-tiempo">
-          Tiempo estimado de entrega: <strong>3 a 5 días hábiles</strong>
-        </p>
+        <p class="error404__panel-texto">PAGE_NOT_FOUND</p>
+        <p class="error404__panel-texto">STATUS: 404</p>
+        <p class="error404__panel-texto">JPGD.AI_SYSTEM</p>
+        <p class="error404__panel-texto">——————————</p>
+        <p class="error404__panel-texto">REDIRECT: index.html</p>
       </div>
-
     </aside>
 
   </main>
-
-  <!-- ── BANDA ANIMADA ── -->
-  <div class="banda-gracias" aria-hidden="true">
-    <div class="banda-gracias__pista">
-      <span>¡GRACIAS!</span>
-      <img src="Assets/assets svg/Sparkle.svg" alt="" />
-      <span>THANK YOU</span>
-      <img src="Assets/assets svg/Sparkle.svg" alt="" />
-      <span>OBRIGADA</span>
-      <img src="Assets/assets svg/Sparkle.svg" alt="" />
-      <span>MERCI</span>
-      <img src="Assets/assets svg/Sparkle.svg" alt="" />
-      <span>¡GRACIAS!</span>
-      <img src="Assets/assets svg/Sparkle.svg" alt="" />
-      <span>THANK YOU</span>
-      <img src="Assets/assets svg/Sparkle.svg" alt="" />
-      <span>OBRIGADA</span>
-      <img src="Assets/assets svg/Sparkle.svg" alt="" />
-      <span>MERCI</span>
-      <img src="Assets/assets svg/Sparkle.svg" alt="" />
-    </div>
-  </div>
 
   <!-- ── FOOTER ── -->
   <footer>
