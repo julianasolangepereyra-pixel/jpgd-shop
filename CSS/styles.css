@@ -3910,7 +3910,7 @@ footer {
 /* Botón de cierre del menú */
 .mobile-menu-close {
   position: absolute;
-  right: -18px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   background: whitesmoke;
@@ -3920,7 +3920,6 @@ footer {
   cursor: pointer;
   display: flex;
   align-items: center;
-  opacity: 0.75;
   padding: 8px 4px;
   line-height: 1;
   transition: opacity 0.2s;
