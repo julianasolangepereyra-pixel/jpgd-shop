@@ -457,11 +457,42 @@ function renderCartPage(cart) {
   }
 }
 
+/* Dibuja el resumen "Tu pedido" del checkout. */
+function renderCheckoutResumen(cart) {
+  const list = document.querySelector('.checkout-resumen__productos');
+  if (!list) return;
+
+  const totales = document.querySelectorAll('.checkout-resumen__fila dd');
+  const total = getCartTotal(cart);
+
+  if (!cart.length) {
+    list.innerHTML = '<p class="cart-empty-message cart-empty-message--page">Tu carrito está vacío.</p>';
+  } else {
+    list.innerHTML = cart.map(item => `
+      <li class="checkout-resumen__item">
+        <div class="checkout-resumen__item-imagen-wrapper">
+          <img src="${item.image}" alt="${item.name}" class="checkout-resumen__item-imagen" />
+          <span class="checkout-resumen__item-cantidad" aria-label="Cantidad: ${item.quantity}">${item.quantity}</span>
+        </div>
+        <div class="checkout-resumen__item-info">
+          <p class="checkout-resumen__item-nombre">${item.name}</p>
+          <p class="checkout-resumen__item-variante">${item.size ? `Talle ${item.size}` : 'Talle único'}</p>
+        </div>
+        <p class="checkout-resumen__item-precio">${formatPrice(item.price * item.quantity)}</p>
+      </li>
+    `).join('');
+  }
+
+  if (totales[0]) totales[0].textContent = formatPrice(total);
+  if (totales[2]) totales[2].textContent = formatPrice(total);
+}
+
 function renderCart() {
   const cart = getCart();
   renderCartBadge(cart);
   renderCarritoResponsive(cart);
   renderCartPage(cart);
+  renderCheckoutResumen(cart);
 }
 
 /* Lee texto de un selector; si no existe, usa un valor de respaldo. */
