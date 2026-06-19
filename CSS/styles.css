@@ -45,20 +45,20 @@
 /* ── FUENTES ── */
 @font-face {
   font-family: "CSClaireMono";
-  src: url("../Assets/tipografias/CS Claire Mono/CSClaireMono-Regular.ttf") format("truetype");
+  src: url("../Assets/tipografias/CSClaireMono/CSClaireMono-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "CSClaireMono";
-  src: url("../Assets/tipografias/CS Claire Mono/CSClaireMono-Italic.ttf") format("truetype");
+  src: url("../Assets/tipografias/CSClaireMono/CSClaireMono-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "CSClaireMonoReverse";
-  src: url("../Assets/tipografias/CS Claire Mono/CSClaireMono-ReverseItalic.ttf") format("truetype");
+  src: url("../Assets/tipografias/CSClaireMono/CSClaireMono-ReverseItalic.ttf") format("truetype");
   font-weight: 400;
 }
 
