@@ -737,3 +737,19 @@ bindAddButtons();
 bindCartControls();
 bindProductQuantityControls();
 bindCardSizeControls();
+
+/* ── CARGA DIFERIDA DEL IFRAME DE SPOTIFY ── */
+const spotifyIframe = document.querySelector('.music-player iframe[data-src]');
+
+if (spotifyIframe) {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        spotifyIframe.src = spotifyIframe.dataset.src;
+        obs.unobserve(spotifyIframe);
+      }
+    });
+  }, { rootMargin: '200px' });
+
+  observer.observe(spotifyIframe);
+}

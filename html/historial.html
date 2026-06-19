@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Remeras — JPGD Shop</title>
+  <title>Mis compras — JPGD Shop</title>
   <link rel="icon" type="image/png" href="../Assets/portfolio/cara feliz.png" />
   <link rel="stylesheet" href="../CSS/styles.css" />
 </head>
@@ -58,7 +58,7 @@
         <img src="../Assets/assets svg/iniciarSesion.svg" alt="" />
         Mi cuenta
       </a>
-      <a href="historial.html" class="mobile-menu-secondary-link">
+      <a href="404.html" class="mobile-menu-secondary-link">
         <img src="../Assets/assets svg/soporte.svg" alt="" />
         Soporte
       </a>
@@ -70,12 +70,10 @@
   <div class="carrito-responsive" id="carritoResponsive" aria-hidden="true">
     <div class="carrito-responsive__inner">
       <h2 class="carrito-responsive__titulo">Tu carrito</h2>
-      <div class="carrito-responsive__items">
-        <!-- El JS carga acá los productos agregados al carrito -->
-      </div>
+      <div class="carrito-responsive__items"></div>
       <div class="carrito-responsive__total-section">
         <div class="carrito-responsive__sep"></div>
-        <p class="carrito-responsive__total-text">TOTAL $38.000</p>
+        <p class="carrito-responsive__total-text">TOTAL $0</p>
       </div>
       <a href="checkout.html" class="carrito-responsive__pagar-btn">PAGAR</a>
     </div>
@@ -85,110 +83,166 @@
   <!-- ── BACKDROP ── -->
   <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
-  <!-- ── HERO CÁPSULA ── -->
-  <section class="capsula-hero">
-    <img class="capsula-hero__img" src="../Assets/fotos/capsula-1/Cápsula.png" alt="Cápsula Abril 2026" />
-    <div class="capsula-hero__tint"></div>
-    <div class="capsula-hero__overlay">
-      <div class="capsula-hero__wrapper">
-        <div class="capsula-hero__badge">
-          <img src="../Assets/assets svg/nuevo.svg" alt="Nuevo" />
+  <!-- ── ENCABEZADO ── -->
+  <header class="historial-encabezado">
+    <div class="historial-encabezado__texto">
+      <h1 class="historial-encabezado__titulo">Mis compras</h1>
+      <p class="historial-encabezado__cantidad">3 pedidos</p>
+    </div>
+    <a href="../index.html" class="historial-encabezado__volver">
+      ← Volver al inicio
+    </a>
+  </header>
+
+  <!-- ── CONTENIDO PRINCIPAL ── -->
+  <main class="historial-contenido">
+
+    <!-- Sparkles decorativos -->
+    <div class="historial-sparkles" aria-hidden="true">
+      <img src="../Assets/assets svg/Sparkle.svg" alt="" class="historial-sparkle historial-sparkle--1" />
+      <img src="../Assets/assets svg/Sparkle.svg" alt="" class="historial-sparkle historial-sparkle--2" />
+      <img src="../Assets/assets svg/Sparkle.svg" alt="" class="historial-sparkle historial-sparkle--3" />
+    </div>
+
+    <!-- ── PEDIDO 1 — Entregado ── -->
+    <article class="historial-pedido">
+      <div class="historial-pedido__header">
+        <div class="historial-pedido__info">
+          <span class="historial-pedido__numero">#JPG-20260605-0042</span>
+          <span class="historial-pedido__fecha">5 de junio, 2026</span>
         </div>
-        <div class="capsula-hero__box">
-          <h1>Cápsula<br>Abril 2026</h1>
-        </div>
+        <span class="historial-pedido__estado historial-pedido__estado--entregado">Entregado</span>
       </div>
-      <a class="capsula-hero__btn" href="#capsula-productos">
-        <span>Lo quiero ya</span>
-        <svg class="ant-border-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387.4 97.9" preserveAspectRatio="none">
-          <ellipse cx="193.7" cy="48.95" rx="205" ry="53.95" fill="none" stroke="orange" stroke-width="2" stroke-dasharray="8 5" vector-effect="non-scaling-stroke"/>
-        </svg>
-      </a>
-    </div>
-  </section>
 
-  <!-- ── CÁPSULA #01 ── -->
-  <div class="capsula-seccion01">
-  <img src="../Assets/assets svg/Sparkle.svg" alt="" class="capsula-fondo-sparkle capsula-fondo-sparkle--1" aria-hidden="true" />
-  <img src="../Assets/assets svg/Sparkle.svg" alt="" class="capsula-fondo-sparkle capsula-fondo-sparkle--2" aria-hidden="true" />
-  <img src="../Assets/assets svg/Sparkle.svg" alt="" class="capsula-fondo-sparkle capsula-fondo-sparkle--3" aria-hidden="true" />
-  <img src="../Assets/assets svg/Sparkle.svg" alt="" class="capsula-fondo-sparkle capsula-fondo-sparkle--4" aria-hidden="true" />
-  <section class="capsula-intro">
-    <img src="../Assets/assets svg/Sparkle.svg" alt="" class="capsula-intro__sparkle" aria-hidden="true" />
-    <h2 class="capsula-intro__titulo">Cápsula #01</h2>
-    <p class="capsula-intro__texto">
-      Una colección de edición limitada inspirada en universos paralelos: arañas, grillas y errores de
-      sistema conviven en remeras, gorras y prints únicos. Piezas pensadas para usar fuerte, con
-      producción reducida y numerada.
-    </p>
-  </section>
+      <ul class="historial-pedido__items">
+        <li class="historial-pedido__item">
+          <div class="historial-pedido__item-img-wrapper">
+            <img src="../Assets/fotos/ejemplo remera.png" alt="Remera Lórem Ipsum" class="historial-pedido__item-img" />
+            <span class="historial-pedido__item-qty" aria-label="Cantidad: 2">2</span>
+          </div>
+          <div class="historial-pedido__item-info">
+            <p class="historial-pedido__item-nombre">Remera Lórem Ipsum</p>
+            <p class="historial-pedido__item-variante">Talle M</p>
+          </div>
+          <p class="historial-pedido__item-precio">$76.000</p>
+        </li>
+        <li class="historial-pedido__item">
+          <div class="historial-pedido__item-img-wrapper">
+            <img src="../Assets/fotos/ejemplo remera.png" alt="Remera Grid System" class="historial-pedido__item-img" />
+            <span class="historial-pedido__item-qty" aria-label="Cantidad: 1">1</span>
+          </div>
+          <div class="historial-pedido__item-info">
+            <p class="historial-pedido__item-nombre">Remera Grid System</p>
+            <p class="historial-pedido__item-variante">Talle L</p>
+          </div>
+          <p class="historial-pedido__item-precio">$42.000</p>
+        </li>
+        <li class="historial-pedido__item">
+          <div class="historial-pedido__item-img-wrapper">
+            <img src="../Assets/fotos/gorra-frente.png" alt="Sticker Pack Editorial" class="historial-pedido__item-img" />
+            <span class="historial-pedido__item-qty" aria-label="Cantidad: 3">3</span>
+          </div>
+          <div class="historial-pedido__item-info">
+            <p class="historial-pedido__item-nombre">Sticker Pack Editorial</p>
+            <p class="historial-pedido__item-variante">Talle único</p>
+          </div>
+          <p class="historial-pedido__item-precio">$36.000</p>
+        </li>
+      </ul>
 
-  <!-- ── PRODUCTOS DE LA CÁPSULA ── -->
-  <main class="capsula-main" id="capsula-productos">
-    <div class="capsula-grilla">
-
-      <!-- Producto 1 -->
-      <article class="capsula-producto">
-        <div class="capsula-producto__imagen-wrapper">
-          <svg class="ant-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <rect x="1.5" y="1.5" width="97" height="97" rx="6.5"
-                  fill="none" stroke="orange" stroke-width="2.5"
-                  stroke-dasharray="8 8" vector-effect="non-scaling-stroke"/>
-          </svg>
-          <img src="../Assets/fotos/capsula-1/gorra.png" alt="Gorra Cápsula Spider" class="capsula-producto__imagen" />
-        </div>
-        <p class="capsula-producto__nombre">Gorra Spider</p>
-      </article>
-
-      <!-- Producto 2 -->
-      <article class="capsula-producto">
-        <div class="capsula-producto__imagen-wrapper">
-          <svg class="ant-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <rect x="1.5" y="1.5" width="97" height="97" rx="6.5"
-                  fill="none" stroke="orange" stroke-width="2.5"
-                  stroke-dasharray="8 8" vector-effect="non-scaling-stroke"/>
-          </svg>
-          <img src="../Assets/fotos/capsula-1/print.png" alt="Print Cápsula Spider" class="capsula-producto__imagen" />
-        </div>
-        <p class="capsula-producto__nombre">Print Spider</p>
-      </article>
-
-      <!-- Producto 3 -->
-      <article class="capsula-producto">
-        <div class="capsula-producto__imagen-wrapper">
-          <svg class="ant-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <rect x="1.5" y="1.5" width="97" height="97" rx="6.5"
-                  fill="none" stroke="orange" stroke-width="2.5"
-                  stroke-dasharray="8 8" vector-effect="non-scaling-stroke"/>
-          </svg>
-          <img src="../Assets/fotos/capsula-1/remera.png" alt="Remera Cápsula Spider" class="capsula-producto__imagen" />
-        </div>
-        <p class="capsula-producto__nombre">Remera Spider</p>
-      </article>
-
-    </div>
-
-    <!-- ── FICHA DEL PRODUCTO ── -->
-    <div class="capsula-ficha">
-      <h2 class="capsula-ficha__nombre">Cápsula #1 Spider</h2>
-      <div class="capsula-ficha__talles">
-        <button type="button" class="capsula-ficha__talle">S</button>
-        <button type="button" class="capsula-ficha__talle">M</button>
-        <button type="button" class="capsula-ficha__talle capsula-ficha__talle--activo">L</button>
-        <button type="button" class="capsula-ficha__talle">XL</button>
-        <button type="button" class="capsula-ficha__talle">2XL</button>
-        <button type="button" class="capsula-ficha__talle">3XL</button>
+      <div class="historial-pedido__footer">
+        <dl class="historial-pedido__total">
+          <dt>Total</dt>
+          <dd>$154.000</dd>
+        </dl>
+        <a href="thank-you.html" class="historial-pedido__detalle">
+          Ver detalle →
+        </a>
       </div>
-      <p class="capsula-ficha__precio">$38.000</p>
-      <button type="button" class="capsula-ficha__agregar">
-        <span>Agregar al carrito</span>
-        <svg class="ant-border-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387.4 97.9" preserveAspectRatio="none">
-          <ellipse cx="193.7" cy="48.95" rx="205" ry="53.95" fill="none" stroke="orange" stroke-width="2" stroke-dasharray="8 5" vector-effect="non-scaling-stroke"/>
-        </svg>
-      </button>
-    </div>
+    </article>
+
+    <!-- ── PEDIDO 2 — En camino ── -->
+    <article class="historial-pedido">
+      <div class="historial-pedido__header">
+        <div class="historial-pedido__info">
+          <span class="historial-pedido__numero">#JPG-20260612-0078</span>
+          <span class="historial-pedido__fecha">12 de junio, 2026</span>
+        </div>
+        <span class="historial-pedido__estado historial-pedido__estado--en-camino">En camino</span>
+      </div>
+
+      <ul class="historial-pedido__items">
+        <li class="historial-pedido__item">
+          <div class="historial-pedido__item-img-wrapper">
+            <img src="../Assets/fotos/ejemplo remera.png" alt="Remera Typeface 01" class="historial-pedido__item-img" />
+            <span class="historial-pedido__item-qty" aria-label="Cantidad: 1">1</span>
+          </div>
+          <div class="historial-pedido__item-info">
+            <p class="historial-pedido__item-nombre">Remera Typeface 01</p>
+            <p class="historial-pedido__item-variante">Talle S</p>
+          </div>
+          <p class="historial-pedido__item-precio">$38.000</p>
+        </li>
+      </ul>
+
+      <div class="historial-pedido__footer">
+        <dl class="historial-pedido__total">
+          <dt>Total</dt>
+          <dd>$38.000</dd>
+        </dl>
+        <a href="thank-you.html" class="historial-pedido__detalle">
+          Ver detalle →
+        </a>
+      </div>
+    </article>
+
+    <!-- ── PEDIDO 3 — En preparación ── -->
+    <article class="historial-pedido">
+      <div class="historial-pedido__header">
+        <div class="historial-pedido__info">
+          <span class="historial-pedido__numero">#JPG-20260618-0091</span>
+          <span class="historial-pedido__fecha">18 de junio, 2026</span>
+        </div>
+        <span class="historial-pedido__estado historial-pedido__estado--preparacion">En preparación</span>
+      </div>
+
+      <ul class="historial-pedido__items">
+        <li class="historial-pedido__item">
+          <div class="historial-pedido__item-img-wrapper">
+            <img src="../Assets/fotos/gorra-frente.png" alt="Gorra Lórem Ipsum" class="historial-pedido__item-img" />
+            <span class="historial-pedido__item-qty" aria-label="Cantidad: 1">1</span>
+          </div>
+          <div class="historial-pedido__item-info">
+            <p class="historial-pedido__item-nombre">Gorra Lórem Ipsum</p>
+            <p class="historial-pedido__item-variante">Talle único</p>
+          </div>
+          <p class="historial-pedido__item-precio">$38.000</p>
+        </li>
+        <li class="historial-pedido__item">
+          <div class="historial-pedido__item-img-wrapper">
+            <img src="../Assets/fotos/ejemplo remera.png" alt="Remera Lórem Ipsum" class="historial-pedido__item-img" />
+            <span class="historial-pedido__item-qty" aria-label="Cantidad: 2">2</span>
+          </div>
+          <div class="historial-pedido__item-info">
+            <p class="historial-pedido__item-nombre">Remera Lórem Ipsum</p>
+            <p class="historial-pedido__item-variante">Talle XL</p>
+          </div>
+          <p class="historial-pedido__item-precio">$76.000</p>
+        </li>
+      </ul>
+
+      <div class="historial-pedido__footer">
+        <dl class="historial-pedido__total">
+          <dt>Total</dt>
+          <dd>$114.000</dd>
+        </dl>
+        <a href="thank-you.html" class="historial-pedido__detalle">
+          Ver detalle →
+        </a>
+      </div>
+    </article>
+
   </main>
-  </div>
 
   <!-- ── FOOTER ── -->
   <footer>
