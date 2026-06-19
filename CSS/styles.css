@@ -1603,14 +1603,18 @@ footer {
 
   .carrusel-3d__pista {
     max-width: min(72vw, 360px);
+    height: auto;
+    aspect-ratio: 3 / 4;
   }
 
   .carrusel-3d__tarjeta--prev {
-    transform: translateX(-34%) scale(0.7) rotateY(18deg);
+    transform: translateX(-50%) scale(0.65) rotateY(18deg);
+    opacity: 0.3;
   }
 
   .carrusel-3d__tarjeta--next {
-    transform: translateX(34%) scale(0.7) rotateY(-18deg);
+    transform: translateX(50%) scale(0.65) rotateY(-18deg);
+    opacity: 0.3;
   }
 
   .carrusel-3d__imagen {
@@ -4038,6 +4042,97 @@ footer {
    HISTORIAL DE COMPRAS
    ══════════════════════════════════════════════════════════════ */
 
+/* ── PERFIL BANNER ── */
+.perfil-banner {
+  position: relative;
+  background: #123aa0;
+  padding: 56px 56px 48px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  overflow: hidden;
+}
+
+.perfil-banner__decoracion {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.perfil-banner__sparkle {
+  position: absolute;
+  pointer-events: none;
+  animation: floatSparkleMusic 4s ease-in-out infinite;
+  filter: brightness(0) invert(1) opacity(0.2);
+}
+
+.perfil-banner__sparkle--1 {
+  top: 16%;
+  right: 10%;
+  width: 48px;
+  animation-duration: 4.4s;
+}
+
+.perfil-banner__sparkle--2 {
+  bottom: 18%;
+  right: 30%;
+  width: 28px;
+  animation-duration: 3.6s;
+  animation-delay: 0.7s;
+}
+
+.perfil-banner__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid orange;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 165, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.perfil-banner__avatar img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.perfil-banner__info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  z-index: 1;
+}
+
+.perfil-banner__etiqueta {
+  font-family: "CSClaireMono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: orange;
+}
+
+.perfil-banner__nombre {
+  font-family: "Riverbend", serif;
+  font-size: clamp(32px, 5vw, 52px);
+  color: whitesmoke;
+  line-height: 0.95;
+  font-weight: 400;
+}
+
+.perfil-banner__email {
+  font-family: "CSClaireMono", monospace;
+  font-size: 13px;
+  color: rgba(245, 245, 245, 0.55);
+  letter-spacing: 0.03em;
+}
+
 /* ── ENCABEZADO ── */
 .historial-encabezado {
   display: flex;
@@ -4316,6 +4411,10 @@ footer {
 
 /* ── RESPONSIVE: HISTORIAL ── */
 @media (max-width: 900px) {
+  .perfil-banner {
+    padding: 40px 24px 36px;
+  }
+
   .historial-encabezado {
     padding: 40px 24px 24px;
     flex-direction: column;
@@ -4329,6 +4428,21 @@ footer {
 }
 
 @media (max-width: 782px) {
+  .perfil-banner {
+    padding: 32px 16px 28px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+  }
+
+  .perfil-banner__info {
+    align-items: center;
+  }
+
+  .perfil-banner__sparkle--1 { width: 32px; }
+  .perfil-banner__sparkle--2 { width: 20px; }
+
   .historial-encabezado {
     padding: 32px 16px 20px;
   }

@@ -738,6 +738,33 @@ bindCartControls();
 bindProductQuantityControls();
 bindCardSizeControls();
 
+/* ── GUARDAR DATOS DEL CHECKOUT ── */
+if (checkoutForm) {
+  checkoutForm.addEventListener('submit', () => {
+    const nombre = document.getElementById('nombre')?.value || '';
+    const apellido = document.getElementById('apellido')?.value || '';
+    const email = document.getElementById('email')?.value || '';
+    if (nombre || apellido) {
+      localStorage.setItem('jpgdShopUser', JSON.stringify({
+        nombre: `${nombre} ${apellido}`.trim(),
+        email: email
+      }));
+    }
+  });
+}
+
+/* ── PERFIL EN HISTORIAL ── */
+const perfilNombre = document.getElementById('perfilNombre');
+const perfilEmail = document.getElementById('perfilEmail');
+
+if (perfilNombre) {
+  try {
+    const user = JSON.parse(localStorage.getItem('jpgdShopUser'));
+    if (user?.nombre) perfilNombre.textContent = user.nombre;
+    if (user?.email) perfilEmail.textContent = user.email;
+  } catch {}
+}
+
 /* ── CARGA DIFERIDA DEL IFRAME DE SPOTIFY ── */
 const spotifyIframe = document.querySelector('.music-player iframe[data-src]');
 
